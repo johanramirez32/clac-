@@ -1,77 +1,73 @@
-def add(n, m): 
-    return n + m 
+def add(n , m): 
+    return n+m 
 
-def sub(n, m): 
-    return n - m 
+
+def sub(n, m):  
+    return n-m 
+
 
 def mul(n, m): 
     return n * m
 
+
 def mod(n, m): 
     return n % m  
 
+
 def div(n, m): 
     if m == 0:
-        return 0 
-    return n / m 
+        division = 0 
+    else:
+        division = n / m 
+    return division 
+
 
 def leer_operacion(): 
     print("calc ", end="")
-    return input().strip().lower()
+    operacion: str = input()
+    return operacion.lower()
+
 
 def tomar_numeros(numeros_operacion, resultado): 
-    lista = numeros_operacion.split(",")
-    n = lista[0].strip()
-    m = lista[1].strip()
+    lista_numeros = numeros_operacion.split(",")
+    n = lista_numeros[0] 
+    m = lista_numeros[-1] 
+    return n,m
 
-    if n == 'r':
-        n = resultado
-    else:
-        n = float(n)
+def ejecutar_numeros(nombre_operacion,n,m,resultado):
 
-    if m == 'r':
-        m = resultado
-    else:
-        m = float(m)
-
-    return n, m
-
-def ejecutar_operacion(nombre_operacion, n, m):
-    if nombre_operacion == 'add':
-        return add(n, m)
-    elif nombre_operacion == 'sub':
-        return sub(n, m)
+    if n.lower().strip() == 'r':
+                n= resultado
+    n,m=float(n),float(m)
+    if nombre_operacion == "add":
+                resultado = add(n, m)
+    elif nombre_operacion == "sub":
+                resultado = sub(n, m)
     elif nombre_operacion == 'mul':
-        return mul(n, m)
+                resultado = mul(n, m)
     elif nombre_operacion == 'div':
-        return div(n, m)
+                resultado = div(n, m)
     elif nombre_operacion == 'mod':
-        return mod(n, m)
+                resultado = mod(n, m)
     else:
-        print("Operación no válida.")
-        return 0
+            resultado = 0
+
+    return resultado 
+
 
 def calculadora():
     resultado = 0
     while True:
-        operacion = leer_operacion()
+        operacion: str = leer_operacion()
 
         if operacion == 'exit':
             print('Goodbye')
             break
 
-        if not ('(' in operacion and ')' in operacion):
-            print("Formato inválido. Usa: op(n,m)")
-            continue
 
-        nombre = operacion[:3]
-        argumentos = operacion[operacion.find("(")+1 : operacion.find(")")]
-        
-        try:
-            n, m = tomar_numeros(argumentos, resultado)
-            resultado = ejecutar_operacion(nombre, n, m)
-            print("Resultado:", resultado)
-        except Exception as e:
-            print("Error en la operación:", e)
+        nombre_operacion: str = operacion[0:3] 
+        n , m = tomar_numeros(operacion[4:-1],resultado)
+        resultado = ejecutar_numeros(nombre_operacion, n, m,resultado)
 
+        print(resultado)
 calculadora()
