@@ -16,16 +16,16 @@ Para las siguientes operaciones:
 
 ### Estructura Del Proyecto
 
-`CALC.py` El codigo principal que contiene la calculadora
-`EADME.md` Documentación del proyecto escrito en Markdown
+* `CALC.py` El codigo principal que contiene la calculadora
+* `EADME.md` Documentación del proyecto escrito en Markdown
 
 ### Como Ejecutar El Proyecto
-Asegúrate de tener instalado Python en el sistema 
+Tener instalado Python en el sistema 
 
 1. Descargar o clonar el proyecto
 Se clona el repositorio si está en GitHub o simplemente guardar el archivo calculadora.py en una carpeta.
 
-`git clone https://github.com/tuusuario/calculadora.git`
+* `git clone https://github.com/tuusuario/calculadora.git`
 cd calculadora
 2. Ejecutar el programa
 Desde la terminal o línea de comandos ejecuta el archivo con: python `calculadora.py`
@@ -35,30 +35,31 @@ Una vez iniciada escribe comandos de la siguiente manera:
 
 calc operación:`número1,número2`
 Ejemplos:
-`calc add:5,3`         Resultado: 8
-`calc div:10,2`        Resultado: 5.0
-`calc mul:r,4`         Usa el resultado anterior (r) y lo multiplica por 4
+* `calc add:5,3`         Resultado: 8
+* `calc div:10,2`        Resultado: 5.0
+* `calc mul:r,4`         Usa el resultado anterior (r) y lo multiplica por 4
+
 4. Salir del programa
 Para cerrar la calculadora escribir `exit`
 
 ### Como probarlo 
 Al iniciar el programa, se pedira ingresar una operación de la siguiente manera:
-número1,número2
-Por ejemplo: `calc add(5,3)`
-Para reutilizar un resultado usar la `r`:
-Si desea salir escribir: `exit`
+* `número1,número2`
+* Por ejemplo: `calc add(5,3)`
+* Para reutilizar un resultado usar la `r`:
+* Si desea salir escribir: `exit`
 
 ### Modulo 
-Estas son las funciones de las operaciones: 
-add(n, m): return n + m
-sub(n, m): return n - m
-mul(n, m): return n * m
-mod(n, m): return n % m
-div(n, m): return 0 if m == 0 else n / m
-Estas funciones realizan las operaciones. El módulo div( especifica que no puede dividir por cero)
+* Estas son las funciones de las operaciones: 
+* add(n, m): return n + m
+* sub(n, m): return n - m
+* mul(n, m): return n * m
+* mod(n, m): return n % m
+* div(n, m): return 0 if m == 0 else n / m
+* Estas funciones realizan las operaciones. El módulo div( especifica que no puede dividir por cero)
 
 Como lee el comando 
-con una definicion `leer_operacion()`
+* con una definicion `leer_operacion()`
 Esta solicita al usuario un primer numero
 
 Con otra definicion tomar_numeros(numeros_operacion, resultado)
@@ -68,9 +69,9 @@ Ejecución de operacioUna definicion ejecutar_operacion(nombre_operacion, n, m)
 Llama a la función correspondiente según sea: `(add, sub, etc)` y retorna el resultado.
 
 Función principal
-definir la: `calculadora()`
-Es el bucle principal que mantiene la calculadora funcionando hasta que se ingrese `exit`
+* definir la:  `calculadora()`
+* Es el bucle principal que mantiene la calculadora funcionando hasta que se ingrese `exit` 
 ### Autores
-Colaborador desarrollo: Sebastian Martinez 
-Autor desarrollo: Johan Ramirez 
-Autor documentacion: Johan Ramirez
+* Colaborador desarrollo: Sebastian Martinez 
+* Autor desarrollo: Johan Ramirez 
+* Autor documentacion: Johan Ramirez
