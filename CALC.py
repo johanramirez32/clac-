@@ -13,23 +13,6 @@ def mul(n, m):
 def mod(n, m): 
     return n % m  
 
-
-def add(n , m): 
-    return n+m 
-
-
-def sub(n, m):  
-    return n-m 
-
-
-def mul(n, m): 
-    return n * m
-
-
-def mod(n, m): 
-    return n % m  
-
-
 def div(n, m): 
     if m == 0:
         division = 0 
