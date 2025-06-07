@@ -17,7 +17,7 @@ Para las siguientes operaciones:
 ### Estructura Del Proyecto
 
 * `CALC.py` El codigo principal que contiene la calculadora
-* `EADME.md` Documentación del proyecto escrito en Markdown
+* `README.md` Documentación del proyecto escrito en Markdown
 
 ### Como Ejecutar El Proyecto
 Tener instalado Python en el sistema 
@@ -35,9 +35,9 @@ Una vez iniciada escribe comandos de la siguiente manera:
 
 calc operación:`número1,número2`
 Ejemplos:
-* `calc add:5,3`         Resultado: 8
-* `calc div:10,2`        Resultado: 5.0
-* `calc mul:r,4`         Usa el resultado anterior (r) y lo multiplica por 4
+* `calc (add:5,3)`         Resultado: 8
+* `calc (div:10,2)`        Resultado: 5.0
+* `calc (mul:r,4)`         Usa el resultado anterior (r) y lo multiplica por 4
 
 4. Salir del programa
 Para cerrar la calculadora escribir `exit`

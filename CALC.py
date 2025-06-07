@@ -7,7 +7,7 @@ def sub(n, m):
 
 
 def mul(n, m): 
-    return n * m
+    return n*m
 
 
 def mod(n, m): 
@@ -20,10 +20,12 @@ def div(n, m):
         division = n / m 
     return division 
 
+def pow(n,m):
+    return n**m
 
 def leer_operacion(): 
-    print("calc ", end="")
-    operacion: str = input()
+    #print("calc ", end="")
+    operacion: str = input("calc ")
     return operacion.lower()
 
 
@@ -36,22 +38,26 @@ def tomar_numeros(numeros_operacion, resultado):
 def ejecutar_numeros(nombre_operacion,n,m,resultado):
 
     if n.lower().strip() == 'r':
-                n= resultado
+        n= resultado
+    if m.lower().strip() == 'r':
+        m= resultado             
     n,m=float(n),float(m)
     if nombre_operacion == "add":
-                resultado = add(n, m)
+        resultado = add(n, m)
     elif nombre_operacion == "sub":
-                resultado = sub(n, m)
+        resultado = sub(n, m)
     elif nombre_operacion == 'mul':
-                resultado = mul(n, m)
+        resultado = mul(n, m)
     elif nombre_operacion == 'div':
-                resultado = div(n, m)
+        resultado = div(n, m)
     elif nombre_operacion == 'mod':
-                resultado = mod(n, m)
+        resultado = mod(n, m)
+    elif nombre_operacion == "pow":
+        resultado = pow(n, m)
     else:
-            resultado = 0
+        resultado = 0
 
-    return resultado 
+    return round(resultado,2) 
 
 
 def calculadora():
